@@ -26,10 +26,13 @@ whoami
 ```
 docker search couchdb
 ```
-##### Comments: Usually you go with the image without any extensions so in this case couchdb which will be the first one listed. The reason we choose it that it is more secure and stable since it is from the service provider. We have to also keep in mind that we are communicating from within docker to the host (AWS instance) so for them to communicate with each other they should be sharing information through ports.
+##### Comments: Usually you go with the image without any extensions so in this case couchdb which will be the first one listed. The reason we choose it that it is more secure and stable since it is from the service provider. We have to also keep in mind that we are communicating from within docker to the host (AWS instance) so for them to communicate with each other they should be sharing information through ports. In our case are mapping using the same port from host as well as container but you can have them expose different port as well. 
 9. To run the couchdb on the 5986 we will need to run the following command: 
 ```
 docker run -p 5986:5986 -d couchdb
+or 
+docker run -p 8080:5986 -d couchdb
+(if you wat host port to be 8080 and container port to be 5986
 
 -p: publish the port of container and the host (AWS server) 
 -d: To run couchdb in the background as a service
