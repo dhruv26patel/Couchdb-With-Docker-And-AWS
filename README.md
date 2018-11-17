@@ -11,13 +11,11 @@ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 9D
 sudo apt-add-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial main stable'
 sudo apt-get update
 sudo apt-get install -y docker-ce
-
 ```
 4. To ececute Docker commands we need to create a user and add it to the docker group which can be done using the folowing steps
 ```
 sudo adduser <username>
 sudo usermod -aG docker <username>
-
 ```
 5. You can change between user using the following commands and whoami (command which display the current user) 
 ```
