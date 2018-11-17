@@ -32,5 +32,11 @@ docker search couchdb
 9. To run the couchdb on the 5986 we will need to run the following command: 
 ```
 docker run -p 5986:5986 -d couchdb
+
+-p: publish the port of container and the host (AWS server) 
+-d: To run couchdb in the background as a service
 ```
-10. You should now be able to use the instance Public IP IPv4 address and append the port and be able to see the welome page like below: 
+10. You should now be able to use the instance Public IP IPv4 address and append the port and be able to see the welome page.
+```
+<Public IP IPv4>:5986
+```
