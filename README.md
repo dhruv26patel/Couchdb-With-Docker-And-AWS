@@ -30,9 +30,10 @@ docker search couchdb
 9. To run the couchdb on the 5986 we will need to run the following command: 
 ```
 docker run -p 5986:5986 -d couchdb
-or 
-docker run -p 8080:5986 -d couchdb
-(if you wat host port to be 8080 and container port to be 5986
+
+or if you wat host port to be 8080 and container port to be 5986  
+
+docker run -p 8080:5986 -d couchdb    
 
 -p: publish the port of container and the host (AWS server) 
 -d: To run couchdb in the background as a service
